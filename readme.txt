@@ -30,4 +30,7 @@ http://inloop.github.io/sqlite-viewer/
 
 I can do this in html
 <p>{{ blog.description | safe | truncatechars:100}}</p>
+
+freeze requirements of your site
+pip freeze > requirements.txt
 """

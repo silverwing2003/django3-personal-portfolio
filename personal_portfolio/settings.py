@@ -24,8 +24,8 @@ SECRET_KEY = '7fkme1zl28zc=6n!x=d77@ihy9)#7^lf4qxk+1&(p=_q0v96o)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
 ALLOWED_HOSTS = ['silverwing2003.pythonanywhere.com']
+
 
 
 # Application definition
@@ -124,3 +124,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("Looks like no local file. You must be on production")
